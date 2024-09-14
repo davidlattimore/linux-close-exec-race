@@ -1,3 +1,7 @@
+//! Spawns N threads, with each thread writing a bash script then executing that same bash script.
+//! The threads operate on completely separate files, so ideally they shouldn't interfere with each
+//! others operations.
+//! 
 //! Running this with a single thread works fine. The program writes a bash script, runs it, then
 //! repeats indefinitely. However, at least on my laptop running a 6.9.3 Linux kernel, running with
 //! 2 or more threads results in almost immediate failure with the error `Text file busy (os error
